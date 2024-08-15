@@ -39,7 +39,7 @@ Example code -
 #include "freertos/FreeRTOS.h"
 #include "neo6m.h"
 
-//IMPORTANT : Always invoke gps_start() and then raw_nmea() to get correct lat_long , speed and course data. Both of them have to be initialised together first.
+//IMPORTANT : Always invoke gps_start() and then raw_nmea() to get correct lat_long , speed and course data. Both of them have to be invoked together first.
 
 void task(void *arg)
 {
