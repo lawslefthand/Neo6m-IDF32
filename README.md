@@ -29,3 +29,38 @@ Supports parsing of both $GPVTG and $GPRMC sentences for comprehensive data.
 Logs the speed and course values, making it useful for tracking movement and direction.
 Usage
 To use this driver, include the neo6m.h header in your project, and call the relevant functions as needed. The driver is designed to be easily integrated into applications requiring GPS data, such as navigation systems, location trackers, or any project involving geolocation.
+
+
+Example code - 
+
+```
+#include <stdint.h>
+#include <stdlib.h>
+#include "freertos/FreeRTOS.h"
+#include "neo6m.h"
+
+
+
+void task(void *arg)
+{
+	gps_start(); //avoid using gps_start() again until and unless driver is not de-inited properly.
+	 while(1)
+	 {
+	  raw_nmea();
+	  lat_long();
+	  time();
+	  speed_course();
+     }
+}
+
+// use uart_driver_delete(UART_NUM_0) when done with UART to avoid collision with other periphrals.
+
+
+void app_main(void)
+{
+    
+    xTaskCreatePinnedToCore(&task, "test", 4092*2, NULL, 5, NULL, 1);
+    
+    
+}
+```
