@@ -27,6 +27,8 @@ Logs the time in a human-readable format.
 Extracts the speed (in kilometers per hour) and course information from the NMEA sentences.
 Supports parsing of both $GPVTG and $GPRMC sentences for comprehensive data.
 Logs the speed and course values, making it useful for tracking movement and direction.
+
+
 Usage
 To use this driver, include the neo6m.h header in your project, and call the relevant functions as needed. The driver is designed to be easily integrated into applications requiring GPS data, such as navigation systems, location trackers, or any project involving geolocation.
 
