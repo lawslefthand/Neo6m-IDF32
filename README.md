@@ -65,7 +65,5 @@ void app_main(void)
 }
 ```
 
-Refrence serial image:
 
-![image](https://github.com/user-attachments/assets/45dc4bf1-aa59-44a4-934c-96968031cf9f)
 
