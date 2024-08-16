@@ -21,6 +21,8 @@ The NMEA sentences can be used to show the following:
 Usage :To use this driver, include the neo6m.h header in your project, and call the relevant functions as needed. The driver is designed to be easily integrated into applications requiring GPS data, such as navigation systems, location trackers, or any project involving geolocation.
 
 
+
+
 Example code - 
 
 ```
@@ -53,5 +55,5 @@ void app_main(void)
 }
 ```
 
-
+Experimental functions: lat_long(),time() and speed_course() use manual parsing and may give unexpected results. Use at your own risk.
 
