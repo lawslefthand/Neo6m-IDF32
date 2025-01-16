@@ -56,7 +56,7 @@ void task(void *arg)
 	gps_start(); //avoid using gps_start() again until and unless driver is not de-inited properly.
 	 while(1)
 	 {
-	  raw_nmea(); // always use before any of the lat_long , time , speed_course functions
+	  raw_nmea(); 
 	 
      }
 }
